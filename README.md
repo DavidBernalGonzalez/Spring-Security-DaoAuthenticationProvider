@@ -40,11 +40,11 @@ Archivo:
 
 `SecurityConfig.java`
 
-Línea:
-
+Línea: 
 ```java
 return httpSecurity.build();
 ```
+![alt text](./images/SecurityConfig.png)
 
 Este breakpoint nos permite ver **cuándo Spring construye la configuración de seguridad de la aplicación**.
 
@@ -54,9 +54,7 @@ En este punto Spring todavía **no está gestionando ninguna petición**, simple
 
 ## 2️⃣ Breakpoint en el endpoint `/ping`
 
-Archivo:
-
-`PublicController.java`
+Archivo: `PublicController.java`
 
 Método:
 
@@ -66,7 +64,7 @@ public String ping() {
     return "API viva";
 }
 ```
-
+![alt text](./images/PublicController.png)
 Este breakpoint nos permitirá comprobar **cuándo una petición consigue atravesar toda la seguridad y llegar al controlador**.
 
 ---
