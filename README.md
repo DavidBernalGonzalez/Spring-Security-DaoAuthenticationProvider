@@ -71,7 +71,7 @@ Este breakpoint nos permitirá comprobar **cuándo una petición consigue atrave
 
 # Paso 2: Ejecutar la aplicación en modo Debug
 
-1. Ejecuta el proyecto en `**Debug Mode**`.
+1. Ejecuta el proyecto en **`Debug Mode`**.
 2. La ejecución se detendrá primero en:
 
 ```
