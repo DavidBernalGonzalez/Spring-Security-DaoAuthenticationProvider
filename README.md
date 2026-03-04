@@ -71,16 +71,16 @@ Este breakpoint nos permitirá comprobar **cuándo una petición consigue atrave
 
 # Paso 2: Ejecutar la aplicación en modo Debug
 
-1. Ejecuta el proyecto en **Debug Mode**.
+1. Ejecuta el proyecto en `**Debug Mode**`.
 2. La ejecución se detendrá primero en:
 
 ```
 SecurityConfig -> httpSecurity.build()
 ```
-
+![alt text](./images/debugMode.png)
 ---
 
-# Qué ocurre cuando se ejecuta `httpSecurity.build()`
+# ¿Qué ocurre cuando se ejecuta `httpSecurity.build()`?
 
 Cuando se ejecuta:
 
@@ -92,7 +92,7 @@ Spring Security realiza internamente varios pasos importantes.
 
 ## 1️⃣ Recoge todos los configuradores de seguridad
 
-Spring busca todos los **SecurityConfigurer** registrados en `HttpSecurity`, por ejemplo:
+Spring busca todos los **`SecurityConfigurer`** registrados en `HttpSecurity`, por ejemplo:
 
 - `AuthorizeHttpRequestsConfigurer`
 - `CsrfConfigurer`
@@ -202,6 +202,7 @@ public String ping() {
     return "API viva";
 }
 ```
+![alt text](./images/debuggerInController.png)
 
 Esto significa que la petición **ha pasado correctamente por toda la cadena de seguridad**.
 
@@ -209,7 +210,7 @@ Esto significa que la petición **ha pasado correctamente por toda la cadena de 
 
 # Resumen del flujo completo
 
-```
+``` 
 httpSecurity.build()
         ↓
 Creación de SecurityFilterChain
